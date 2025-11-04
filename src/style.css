@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Noto Sans", Arial, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  font-size: 28px;
+}
+
+.calculator {
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.5);
+  border-right: 1.5px solid #5e5c5e;
+  border-bottom: 1.5px solid #5e5c5e;
+}
+
+.display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 90px;
+  padding: 0 20px 10px;
+  font-size: 48px;
+  font-weight: 200;
+  background-color: #5e5c5e;
+  border-radius: 8px 7px 0 0;
+  text-align: right;
+  color: #fff;
+  position: relative;
+}
+
+.display::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #eb5757;
+  box-shadow:
+    24px 0 #e8b638,
+    48px 0 #34bf38;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button:not(.toggle) {
+  font-family: "Open Sans", Arial, serif;
+  color: #f2f2eb;
+  width: calc(100% / 4);
+  font-size: 28px;
+  height: 60px;
+  border: none;
+  border-left: 1.5px solid #5e5c5e;
+  border-top: 1.5px solid #5e5c5e;
+  cursor: pointer;
+}
+
+.equal {
+  border-radius: 0 0 7px 0;
+}
+
+.orange {
+  background-color: #f79320;
+}
+
+.dark-grey {
+  background-color: #737273;
+}
+
+.light-grey {
+  background-color: #969396;
+}
+
+button:hover {
+  filter: brightness(115%);
+}
+
+button:active {
+  filter: brightness(90%);
+}
+
+.zero {
+  flex-grow: 1;
+  border-radius: 0 0 0 8px;
+}
+
+.toggle {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  font-size: 50px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* --- ТЁМНАЯ ТЕМА --- */
+
+body.dark {
+  background: #291c29;
+}
+
+body.dark .calculator {
+  box-shadow: 0 0 55px rgba(0, 0, 0, 0.7);
+  border-right: 1.5px solid #000;
+  border-bottom: 1.5px solid #000;
+}
+
+body.dark .display {
+  background-color: #3b3a3b;
+  color: #e8e8dc;
+}
+
+body.dark button:not(.toggle) {
+  color: #e8e8dc;
+  border-left: 1.5px solid #000;
+  border-top: 1.5px solid #000;
+}
+
+body.dark .orange {
+  background-color: #ad691c;
+}
+
+body.dark .dark-grey {
+  background-color: #4d4b4d;
+}
+
+body.dark .light-grey {
+  background-color: #616061;
+}
