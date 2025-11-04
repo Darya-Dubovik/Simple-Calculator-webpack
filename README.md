@@ -17,7 +17,7 @@
 
 ### Структура проекта:
 
-SIMPLE CALCULATOR/
+``` SIMPLE CALCULATOR/
 │
 ├── .husky/ - cкрипты для Git hooks (pre-commit с линтингом)
 │  
@@ -39,6 +39,7 @@ SIMPLE CALCULATOR/
 ├── package.json - настройки npm
 ├── package-lock.json - зафиксированные версии всех установленных пакетов, читаемые npm
 └── webpack.config.cjs - основная конфигурация Webpack
+```
 
 #### Основные технологии:
 
